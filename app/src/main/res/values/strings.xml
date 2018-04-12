@@ -1,0 +1,6 @@
+<resources>
+  <string name="app_name">TemperatureConverter</string>
+  <string name="fahrenheit_hint">Fahrenheit</string>
+  <string name="celsius_hint">Celsius</string>
+  <string name="kelvin_hint">Kelvin</string>
+</resources>

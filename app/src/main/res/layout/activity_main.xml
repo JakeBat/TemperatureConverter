@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context="edu.cnm.deepdive.temperatureconverter.MainActivity">
+
+  <android.support.constraint.Guideline
+    android:id="@+id/horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    app:layout_constraintGuide_percent="0.5"/>
+
+  <android.support.constraint.Guideline
+    android:id="@+id/vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_constraintGuide_percent="0.5"/>
+
+  <android.support.design.widget.TextInputLayout
+    android:id="@+id/fahrenheit_layout"
+    android:layout_width="@dimen/zero"
+    android:layout_height="wrap_content"
+    app:hintEnabled="true"
+    app:hintAnimationEnabled="true"
+    android:gravity="center"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toStartOf="@id/vertical"
+    app:layout_constraintBottom_toBottomOf="@id/horizontal">
+
+    <android.support.design.widget.TextInputEditText
+      android:id="@+id/fahrenheit_edit"
+      android:layout_width="@dimen/hundo"
+      android:layout_height="wrap_content"
+      android:hint="@string/fahrenheit_hint"
+      android:inputType="numberDecimal|numberSigned"/>
+
+  </android.support.design.widget.TextInputLayout>
+
+  <android.support.design.widget.TextInputLayout
+    android:id="@+id/celsius_layout"
+    android:layout_width="@dimen/zero"
+    android:layout_height="wrap_content"
+    app:hintEnabled="true"
+    app:hintAnimationEnabled="true"
+    android:gravity="center"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toEndOf="@id/vertical"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toBottomOf="@id/horizontal">
+
+    <android.support.design.widget.TextInputEditText
+      android:id="@+id/celsius_edit"
+      android:layout_width="@dimen/hundo"
+      android:layout_height="wrap_content"
+      android:hint="@string/celsius_hint"
+      android:inputType="numberDecimal|numberSigned"/>
+
+  </android.support.design.widget.TextInputLayout>
+
+  <android.support.design.widget.TextInputLayout
+    android:id="@+id/kelvin_layout"
+    android:layout_width="@dimen/zero"
+    android:layout_height="wrap_content"
+    app:hintEnabled="true"
+    app:hintAnimationEnabled="true"
+    android:gravity="center"
+    app:layout_constraintTop_toBottomOf="@id/horizontal"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent">
+
+    <android.support.design.widget.TextInputEditText
+      android:id="@+id/kelvin_edit"
+      android:layout_width="@dimen/hundo"
+      android:layout_height="wrap_content"
+      android:hint="@string/kelvin_hint"
+      android:inputType="numberDecimal|numberSigned"/>
+
+  </android.support.design.widget.TextInputLayout>
+
+</android.support.constraint.ConstraintLayout>
